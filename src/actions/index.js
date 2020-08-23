@@ -1,8 +1,55 @@
-// {
-//     type:'ADD_MOVIES'
-//     movies:[m1,m2,m3]
+
+
+export const ADD_MOVIES='ADD_MOVIES';
+export const ADD_TO_FAVOURITES ='ADD_TO_ FAVOURITES';
+export const REMOVE_FROM_FAVOURITES = 'REMOVE_FROM_ FAVOURITES';
+export const SET_SHOW_FAVOURITES = 'SET_SHOW_FAVOURITES FAVOURITES';
+
+export function addMovies(movies)
+{
+    return(
     
-// }
-// {
-//     type:'DECREASE_COUNT'
-// }
+        {
+            type:ADD_MOVIES,
+            movies
+          })
+    
+}
+
+export function addFavourite(movie)
+{
+    return(
+        {
+            type: ADD_TO_FAVOURITES,
+            movie
+        }
+    )
+    
+       
+    
+}
+
+export function removeFromFavourites(movie) {
+    return(
+        {
+            type: REMOVE_FROM_FAVOURITES,
+            movie
+        }
+    )
+
+    
+
+}
+
+
+export function setshowFavourites(val) {
+    return(
+        {
+            type: SET_SHOW_FAVOURITES,
+            val
+        }
+    )
+
+   
+
+}
